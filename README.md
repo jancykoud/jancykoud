@@ -64,8 +64,6 @@ Full mentoring platform: Nuxt.js · Node.js · MySQL · Docker · GitLab CI/CD.
 
 <div align="center">
 
-![Jancy's GitHub stats](https://github-readme-stats.vercel.app/api?username=jancykoud&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&theme=default)
-
 ![GitHub Streak](https://streak-stats.demolab.com?user=jancykoud&hide_border=true)
 
 </div>
