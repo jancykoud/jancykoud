@@ -1,6 +1,15 @@
+<div align="center">
+
 # Hi, I'm Jancy 👋
 
-### Fullstack Engineer · GIS & IoT Specialist
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=2E9BDA&center=true&vCenter=true&width=650&lines=Fullstack+Engineer;GIS+%26+IoT+Specialist;Building+data+platforms+for+the+environment)](https://koud-portfolio.netlify.app)
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-koud--portfolio-2E9BDA?style=for-the-badge&logo=netlify&logoColor=white)](https://koud-portfolio.netlify.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-jancy--koud--banga-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jancy-koud-banga)
+[![Email](https://img.shields.io/badge/Email-Contact_me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:fridelinbanga@gmail.com)
+![Location](https://img.shields.io/badge/📍_Clermont--Ferrand-France-555?style=for-the-badge)
+
+</div>
 
 I build **data platforms for environmental monitoring** — turning sensor networks into standards-based, production-grade web applications.
 
@@ -51,13 +60,18 @@ Full mentoring platform: Nuxt.js · Node.js · MySQL · Docker · GitLab CI/CD.
 
 ---
 
-## 📫 Let's connect
+## 📊 GitHub in numbers
 
-- 🌐 Portfolio — [koud-portfolio.netlify.app](https://koud-portfolio.netlify.app)
-- 💼 LinkedIn — [jancy-koud-banga](https://linkedin.com/in/jancy-koud-banga)
-- 📧 fridelinbanga@gmail.com
-- 📍 Clermont-Ferrand, France
+<div align="center">
+
+![Jancy's GitHub stats](https://github-readme-stats.vercel.app/api?username=jancykoud&show_icons=true&hide_border=true&count_private=true&include_all_commits=true&theme=default)
+
+![GitHub Streak](https://streak-stats.demolab.com?user=jancykoud&hide_border=true)
+
+</div>
 
 ---
 
-*Fullstack by trade, geospatial by specialty. Building open, standards-based systems for the environment.*
+<div align="center">
+<i>Fullstack by trade, geospatial by specialty — building open, standards-based systems for the environment.</i>
+</div>
