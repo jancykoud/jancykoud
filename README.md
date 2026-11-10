@@ -1,75 +1,135 @@
 <div align="center">
 
-# Hi, I'm Jancy 👋
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <img src="assets/banner-light.svg" width="900" alt="Jancy Koud Banga. Software engineer: sensor data platforms, business applications, applied generative AI. Clermont-Ferrand, France. Illustration of sensors on a map, linked to an interface.">
+</picture>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=2E9BDA&center=true&vCenter=true&width=650&lines=Fullstack+Engineer;GIS+%26+IoT+Specialist;Building+data+platforms+for+the+environment)](https://koud-portfolio.netlify.app)
+<br><br>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-koud--portfolio-2E9BDA?style=for-the-badge&logo=netlify&logoColor=white)](https://koud-portfolio.netlify.app)
+[![Portfolio](https://img.shields.io/badge/Portfolio-koud--portfolio-2E9BDA?style=for-the-badge&logo=netlify&logoColor=white)](https://koud-portfolio.netlify.app/en)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-jancy--koud--banga-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/jancy-koud-banga)
-[![Email](https://img.shields.io/badge/Email-Contact_me-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:fridelinbanga@gmail.com)
-![Location](https://img.shields.io/badge/📍_Clermont--Ferrand-France-555?style=for-the-badge)
+[![Contact](https://img.shields.io/badge/Contact-Write_to_me-1A6FA6?style=for-the-badge)](https://koud-portfolio.netlify.app/en/contact)
+![Location: Clermont-Ferrand, France](https://img.shields.io/badge/Clermont--Ferrand-France-555?style=for-the-badge)
 
 </div>
 
-I build **data platforms for environmental monitoring** — turning sensor networks into standards-based, production-grade web applications.
+I build web platforms that turn field data and business processes into products people can use, in three areas: sensor and environmental data, business applications, and applied generative AI.
+A former mathematics teacher, I learn how the work is done before I write code, and I stay with a product from the first requirements through to support.
 
-🌍 Currently engineering the **TERRA FORMA** portal, a €12M national research programme (ANR · CNRS · INRAE · IRD) linking 30 laboratories. I connect **54 LoRaWAN sensors** to a monitoring platform built on the **OGC SensorThings** standard, used by researchers across France.
+## About
 
----
+- **Now** · building DECLIC for the ANR TERRA FORMA project (CNRS, INRAE, IRD, UCA).
+- **Before** · final-year internship at Orange Data/AI (Angular, DataMesh); full-stack developer at GSI Concept.
+- **Background** · two master's degrees from Montpellier: computer science, and information systems management.
+- **Available** · January 2027, anywhere in France.
 
-## 🛠️ Tech Stack
+## What I work on
 
-**Frontend**
-![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![Nuxt](https://img.shields.io/badge/Nuxt-00DC82?style=flat-square&logo=nuxtdotjs&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+### Sensor & environmental data platforms
 
-**Backend**
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+- Declaring and cataloguing connected scientific instruments.
+- LoRaWAN sensors: low data rates, messages that arrive late.
+- Open standards: OGC SensorThings on FROST-Server, INSPIRE / ISO 19115 metadata.
+- Leaflet maps, and consistency checks on identifiers and coordinates.
 
-**Data · Geo · IoT**
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white)
-![Qdrant](https://img.shields.io/badge/Qdrant-DC244C?style=flat-square&logo=qdrant&logoColor=white)
-![OGC SensorThings](https://img.shields.io/badge/OGC_SensorThings-6CA0DC?style=flat-square)
-![LoRaWAN](https://img.shields.io/badge/LoRaWAN-1E3A8A?style=flat-square)
+**Shipped in:** [DECLIC](https://koud-portfolio.netlify.app/en/projects/declic), a catalogue of 53 LoRaWAN instrument models.
 
-**DevOps**
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![GitLab CI/CD](https://img.shields.io/badge/GitLab_CI/CD-FC6D26?style=flat-square&logo=gitlab&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black)
+### Business applications, end to end
 
----
+- Data model, API, interfaces, access rights, tests, and release to production.
+- Built for specific trades: home services, school management, mentoring, e-commerce.
+- Offline-capable apps, payments, document generation.
 
-## 🚀 Featured Projects
+**Shipped in:** [ESGE Domicile](https://domicile.esgegroup.com), [Akili](https://edu-connect-web.vercel.app), [Akili Université](https://akili-universite.vercel.app), [Orient'Ex](https://orient-ex.org), [VY](https://vy-fawn.vercel.app).
 
-**🌍 TERRA FORMA — FROST-FORMS** · *professional*
-Environmental sensor monitoring portal for a €12M ANR research programme. React 18 + TypeScript frontend, Express + PostgreSQL + Prisma backend with JWT/OIDC auth, 54 LoRaWAN sensors synchronised to the OGC SensorThings standard. Interoperable with INSPIRE and THEIA/OZCAR.
+### Applied generative AI
 
-**🔎 Wmbia — Semantic search engine** · [Live ↗](https://wmbia.com)
-Vector-based semantic search built with React, Python and Qdrant.
+- Assistants wired to real content, not demos.
+- My portfolio's assistant is built on the Claude API: streamed answers, a knowledge base generated from the site's content, rate limiting.
+- Semantic search and RAG: embeddings, vector search with Qdrant.
 
-**🎓 Orient'Ex — Educational mentoring platform** · [Live ↗](https://orient-ex.org)
-Full mentoring platform: Nuxt.js · Node.js · MySQL · Docker · GitLab CI/CD.
+**Shipped in:** KOUD AI, assistant of my portfolio (currently offline), and a [blog article on vector search](https://koud-portfolio.netlify.app/en/blog/qdrant-recherche-vectorielle).
 
----
+## Featured work
 
-## 📊 GitHub in numbers
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-declic-dark.svg">
+  <img src="assets/card-declic-light.svg" width="600" alt="DECLIC, professional and confidential. Declaring and cataloguing connected scientific instruments: a 4-step declaration flow with moderation before publication, and a catalogue of 53 LoRaWAN instrument models. React 18, TypeScript, Express, Prisma, PostgreSQL, OIDC.">
+</picture>
+
+[Case study on my portfolio](https://koud-portfolio.netlify.app/en/projects/declic)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-esge-domicile-dark.svg">
+  <img src="assets/card-esge-domicile-light.svg" width="600" alt="ESGE Domicile, live. Home services, from quote to invoice: three workspaces for clients, service providers and the team, with access rules enforced in the database by Row Level Security. Next.js, React, TypeScript, Supabase, PostgreSQL, about 230 Playwright tests.">
+</picture>
+
+[domicile.esgegroup.com](https://domicile.esgegroup.com)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-akili-dark.svg">
+  <img src="assets/card-akili-light.svg" width="600" alt="Akili, demo. School management for several schools at once, usable offline, with five user roles. React, TypeScript, Express, Prisma, PostgreSQL, Redis.">
+</picture>
+
+[Akili demo](https://edu-connect-web.vercel.app)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-akili-universite-dark.svg">
+  <img src="assets/card-akili-universite-light.svg" width="600" alt="Akili Université, demo. The edition of the Akili school management platform adapted to universities. React, TypeScript, Express, Prisma, PostgreSQL, Redis.">
+</picture>
+
+[Akili Université demo](https://akili-universite.vercel.app)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-orient-ex-dark.svg">
+  <img src="assets/card-orient-ex-light.svg" width="600" alt="Orient'Ex, live. Volunteer mentoring that puts students and young professionals in touch with volunteer mentors. Nuxt.js, MySQL, Docker, GitLab CI/CD.">
+</picture>
+
+[orient-ex.org](https://orient-ex.org)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-vy-dark.svg">
+  <img src="assets/card-vy-light.svg" width="600" alt="VY, live. An online clothing store where each item is printed only once it has been ordered. Next.js.">
+</picture>
+
+[VY store](https://vy-fawn.vercel.app)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-carhilo-dark.svg">
+  <img src="assets/card-carhilo-light.svg" width="600" alt="Carhilo, in progress. A carpooling app written in Flutter, with development driven by tests.">
+</picture>
+
+## Tech stack
+
+| Area | Tools | Used in |
+| :-- | :-- | :-- |
+| **Frontend** | React, Next.js, TypeScript, Angular, Vue/Nuxt, Tailwind | DECLIC, ESGE Domicile (incl. Tailwind), Akili, VY, Orient'Ex (Nuxt), Orange Data/AI (Angular) |
+| **Backend & APIs** | Node.js, Express, Python | DECLIC (Node.js, Express; Python scripts for data integration and validation), Akili (Node.js, Express) |
+| **Data** | PostgreSQL, Prisma, Supabase, MySQL, Redis, Qdrant | DECLIC, ESGE Domicile (Supabase), Akili (Redis), Orient'Ex (MySQL), vector search article (Qdrant) |
+| **AI** | Claude API, RAG, embeddings, vector search | KOUD AI (currently offline), vector search article |
+| **IoT & standards** | LoRaWAN, OGC SensorThings, FROST-Server, INSPIRE | DECLIC |
+| **Delivery & QA** | Docker, GitLab CI/CD, Playwright, Vitest | Orient'Ex (Docker, GitLab CI/CD), ESGE Domicile (Playwright, Vitest) |
+
+## What's next
+
+- AI agents that carry out business processes, not only answer questions about them.
+- Sensor data that AI can work with directly, from the field measurement to the decision.
+- Digital products for education in Africa.
+
+## Activity
 
 <div align="center">
-
-![GitHub Streak](https://streak-stats.demolab.com?user=jancykoud&hide_border=true)
-
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=jancykoud&hide_border=true&background=00000000&ring=2E9BDA&fire=2E9BDA&currStreakLabel=6CBDEA&currStreakNum=E8F0F6&sideNums=E8F0F6&sideLabels=A3B6C5&dates=A3B6C5&stroke=22394D">
+  <img src="https://streak-stats.demolab.com?user=jancykoud&hide_border=true&background=00000000&ring=2E9BDA&fire=2E9BDA&currStreakLabel=1A6FA6&currStreakNum=0E2233&sideNums=0E2233&sideLabels=48606F&dates=48606F&stroke=CFE2F0" alt="Contribution statistics for jancykoud: total contributions, current streak and longest streak.">
+</picture>
 </div>
 
 ---
 
 <div align="center">
-<i>Fullstack by trade, geospatial by specialty — building open, standards-based systems for the environment.</i>
+
+Looking for a software engineer from January 2027? [Get in touch through my portfolio](https://koud-portfolio.netlify.app/en/contact).
+
 </div>
