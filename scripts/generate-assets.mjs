@@ -91,72 +91,104 @@ function banner(t) {
 
 /* ----------------------------------------------------------------- cards */
 
+// Compact cards are drawn 420 wide and shown 400 wide in the README, so two sit
+// side by side on desktop and one fills a phone screen. DECLIC also has a wide
+// variant (844 wide, shown 804 wide: same scale, same height) for the first row.
+const CARD_W = 420, WIDE_W = 844, CARD_H = 188, PAD = 20;
+const STATE_LABELS = { confidential: "CONFIDENTIAL", live: "LIVE", demo: "DEMO", progress: "IN PROGRESS" };
+const MAX_CHIPS = 5;
+
 const CARDS = [
-  { id: "declic", state: "confidential", label: "PROFESSIONAL · CONFIDENTIAL", name: "DECLIC",
-    tagline: "Declaring and cataloguing connected scientific instruments",
-    lines: ["A 4-step declaration flow, with moderation before publication.", "Catalogue of 53 LoRaWAN instrument models."],
-    chips: ["React 18", "TypeScript", "Express", "Prisma", "PostgreSQL", "OIDC"] },
-  { id: "esge-domicile", state: "live", label: "LIVE", name: "ESGE Domicile",
+  { id: "declic", state: "confidential", name: "DECLIC", cta: "Case study",
+    tagline: "Cataloguing connected scientific instruments",
+    wideTagline: "Declaring and cataloguing connected scientific instruments",
+    lines: ["4-step declaration flow, moderated before publication.", "Catalogue of 53 LoRaWAN instrument models, OIDC sign-in."],
+    chips: ["React", "TypeScript", "Express", "Prisma", "PostgreSQL"] },
+  { id: "esge-domicile", state: "live", name: "ESGE Domicile", cta: "Open the app",
     tagline: "Home services, from quote to invoice",
-    lines: ["Three workspaces: clients, service providers, and the team.", "Access rules enforced in the database with Row Level Security."],
-    chips: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL · RLS", "~230 Playwright tests"] },
-  { id: "akili", state: "demo", label: "DEMO", name: "Akili",
+    lines: ["Three workspaces: clients, providers, and the team.", "Row Level Security, ~230 Playwright tests."],
+    chips: ["Next.js", "React", "TypeScript", "Supabase", "Playwright"] },
+  { id: "akili", state: "demo", name: "Akili", cta: "Open the demo",
     tagline: "School management for several schools at once",
     lines: ["One platform for multiple schools, usable offline.", "Five user roles."],
-    chips: ["React", "TypeScript", "Express", "Prisma", "PostgreSQL", "Redis"] },
-  { id: "akili-universite", state: "demo", label: "DEMO", name: "Akili Université",
+    chips: ["React", "TypeScript", "Express", "Prisma", "PostgreSQL"] },
+  { id: "akili-universite", state: "demo", name: "Akili Université", cta: "Open the demo",
     tagline: "Akili for higher education",
-    lines: ["The edition of the Akili school management platform", "adapted to universities."],
-    chips: ["React", "TypeScript", "Express", "Prisma", "PostgreSQL", "Redis"] },
-  { id: "orient-ex", state: "live", label: "LIVE", name: "Orient'Ex",
-    tagline: "Volunteer mentoring for students and young professionals",
-    lines: ["Puts students and young professionals in touch with", "volunteer mentors."],
+    lines: ["The edition of the Akili school management", "platform adapted to universities."],
+    chips: ["React", "TypeScript", "Express", "Prisma", "PostgreSQL"] },
+  { id: "orient-ex", state: "live", name: "Orient'Ex", cta: "Open the app",
+    tagline: "Volunteer mentoring platform",
+    lines: ["Puts students and young professionals in touch", "with volunteer mentors."],
     chips: ["Nuxt.js", "MySQL", "Docker", "GitLab CI/CD"] },
-  { id: "vy", state: "live", label: "LIVE", name: "VY",
+  { id: "vy", state: "live", name: "VY", cta: "Open the app",
     tagline: "Online store for print-on-demand clothing",
     lines: ["A clothing store where each item is printed", "only once it has been ordered."],
     chips: ["Next.js"] },
-  { id: "carhilo", state: "progress", label: "IN PROGRESS", name: "Carhilo",
+  { id: "carhilo", state: "progress", name: "Carhilo", cta: null,
     tagline: "Carpooling, built test-first",
     lines: ["A carpooling app written in Flutter,", "with development driven by tests."],
     chips: ["Flutter", "Test-driven"] },
 ];
 
-function card(c, t) {
-  const W = 600, PAD = 28;
-  const sc = t.states[c.state];
-  const labelW = Math.round(c.label.length * 13 * 0.62 + 34);
-  // chips, wrapped
-  const CH = 30, GAP = 6, FS = 14;
-  let x = PAD, row = 0;
+// Monospace advance is ~0.6em in every fallback of the MONO stack; 0.62 keeps a margin.
+const monoWidth = (txt, size, spacing = 0) => txt.length * (size * 0.62 + spacing);
+
+/** Pill sized from its text, text centred: the inner margin is equal on both sides. */
+function pill(x, y, txt, { size, h, padX, spacing = 0, fill, stroke, ink, weight = 400 }) {
+  const w = Math.ceil(monoWidth(txt, size, spacing) + padX * 2);
+  const svg = `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${h / 2}" fill="${fill}" stroke="${stroke}"/>` +
+    `<text x="${x + w / 2}" y="${y + h / 2 + size * 0.35}" text-anchor="middle" font-family="${MONO}" font-size="${size}" font-weight="${weight}" letter-spacing="${spacing}" fill="${ink}">${esc(txt)}</text>`;
+  return { svg, w };
+}
+
+/** The 4 declaration steps, then moderation, then publication (wide DECLIC card only). */
+function declicFlow(t, x0, y) {
+  const step = 44, r = 13;
+  let s = `<line x1="${x0}" y1="${y}" x2="${x0 + step * 5}" y2="${y}" stroke="${t.accent}" stroke-width="1.6" opacity="0.55"/>`;
+  for (let i = 0; i < 4; i++) {
+    const cx = x0 + i * step;
+    s += `<circle cx="${cx}" cy="${y}" r="${r}" fill="${t.panel}" stroke="${t.accent}" stroke-width="1.6"/>` +
+      `<text x="${cx}" y="${y + 4.5}" text-anchor="middle" font-family="${MONO}" font-size="12.5" font-weight="600" fill="${t.accentText}">${i + 1}</text>`;
+  }
+  const mx = x0 + 4 * step, px = x0 + 5 * step;
+  s += `<rect x="${mx - r}" y="${y - r}" width="${r * 2}" height="${r * 2}" rx="6" fill="${t.panel}" stroke="${t.accent}" stroke-width="1.6"/>` +
+    `<path d="M${mx - 5} ${y} l4 4 l7 -8" fill="none" stroke="${t.accentText}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>` +
+    `<circle cx="${px}" cy="${y}" r="${r}" fill="${t.accent}"/><circle cx="${px}" cy="${y}" r="4.5" fill="${t.panel}"/>`;
+  const label = (cx, txt) => `<text x="${cx}" y="${y + 34}" text-anchor="middle" font-family="${MONO}" font-size="11" fill="${t.muted}">${txt}</text>`;
+  s += label(x0 + step * 1.5, "4 steps") + label(mx - 6, "moderation") + label(px + 30, "published");
+  return s;
+}
+
+function card(c, t, wide = false) {
+  if (c.chips.length > MAX_CHIPS) throw new Error(`${c.id}: more than ${MAX_CHIPS} chips`);
+  const W = wide ? WIDE_W : CARD_W, H = CARD_H;
+  const sc = t.states[c.state], label = STATE_LABELS[c.state];
+  const state = pill(PAD, 18, label, { size: 10.5, h: 22, padX: 11, spacing: 0.5, fill: t.panel, stroke: sc, ink: sc, weight: 600 });
+  let x = PAD;
   const chips = c.chips.map((txt) => {
-    const w = Math.round(txt.length * FS * 0.61 + 20);
-    if (x + w > W - PAD) { x = PAD; row++; }
-    const s = `<rect x="${x}" y="${row * (CH + GAP)}" width="${w}" height="${CH}" rx="15" fill="${t.chipBg}" stroke="${t.border}"/>` +
-      `<text x="${x + w / 2}" y="${row * (CH + GAP) + 20}" text-anchor="middle" font-family="${MONO}" font-size="${FS}" fill="${t.chipInk}">${esc(txt)}</text>`;
-    x += w + GAP;
-    return s;
+    const chip = pill(x, 148, txt, { size: 11.5, h: 22, padX: 7, fill: t.chipBg, stroke: t.border, ink: t.chipInk });
+    x += chip.w + 5;
+    return chip.svg;
   }).join("");
-  const chipsH = c.chips.length ? (row + 1) * CH + row * GAP : 0;
-  const chipsY = 196;
-  const H = c.chips.length ? chipsY + chipsH + 26 : 184;
-  const desc = `${c.label.toLowerCase()}. ${c.tagline}. ${c.lines.join(" ")}${c.chips.length ? " Built with " + c.chips.join(", ") + "." : ""}`;
+  if (x - 5 > CARD_W - PAD) throw new Error(`${c.id}: chips do not fit on one line`);
+  const tagline = wide && c.wideTagline ? c.wideTagline : c.tagline;
+  const desc = `${label.toLowerCase()}. ${tagline}. ${c.lines.join(" ")} Built with ${c.chips.join(", ")}.`;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-labelledby="t d">
 <title id="t">${esc(c.name)}</title>
 <desc id="d">${esc(desc)}</desc>
-<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="14" fill="${t.bg}" stroke="${t.border}" stroke-width="2"/>
-<rect x="1" y="26" width="5" height="54" rx="2.5" fill="${t.accent}"/>
-<rect x="${PAD}" y="24" width="${labelW}" height="26" rx="13" fill="${t.panel}" stroke="${sc}" stroke-width="1.5"/>
-<circle cx="${PAD + 14}" cy="37" r="4" fill="${sc}"/>
-<text x="${PAD + 25}" y="41.5" font-family="${MONO}" font-size="13" font-weight="600" fill="${sc}" letter-spacing="0.4">${esc(c.label)}</text>
-<text x="${PAD}" y="88" font-family="${SANS}" font-size="28" font-weight="700" fill="${t.ink}" letter-spacing="-0.4">${esc(c.name)}</text>
-<text x="${PAD}" y="116" font-family="${SANS}" font-size="17.5" font-weight="600" fill="${t.accentText}">${esc(c.tagline)}</text>
-<text font-family="${SANS}" font-size="16.5" fill="${t.muted}">
-  <tspan x="${PAD}" y="148">${esc(c.lines[0])}</tspan>
-  <tspan x="${PAD}" y="172">${esc(c.lines[1])}</tspan>
+<rect x="1" y="1" width="${W - 2}" height="${H - 2}" rx="12" fill="${t.bg}" stroke="${t.border}" stroke-width="1.5"/>
+<rect x="1" y="50" width="4" height="40" rx="2" fill="${t.accent}"/>
+${state.svg}
+${c.cta ? `<text class="cta" x="${W - PAD}" y="33" text-anchor="end" font-family="${SANS}" font-size="12" font-weight="600" fill="${t.accentText}">${esc(c.cta)} →</text>` : ""}
+<text x="${PAD}" y="70" font-family="${SANS}" font-size="20" font-weight="700" fill="${t.ink}" letter-spacing="-0.3">${esc(c.name)}</text>
+<text x="${PAD}" y="90" font-family="${SANS}" font-size="13.5" font-weight="600" fill="${t.accentText}">${esc(tagline)}</text>
+<text font-family="${SANS}" font-size="13.5" fill="${t.muted}">
+  <tspan x="${PAD}" y="113">${esc(c.lines[0])}</tspan>
+  <tspan x="${PAD}" y="131">${esc(c.lines[1])}</tspan>
 </text>
-${c.chips.length ? `<g transform="translate(0 ${chipsY})">${chips}</g>` : ""}
+${chips}
+${wide ? declicFlow(t, 548, 92) : ""}
 </svg>
 `;
 }
@@ -164,5 +196,6 @@ ${c.chips.length ? `<g transform="translate(0 ${chipsY})">${chips}</g>` : ""}
 for (const [name, t] of Object.entries(THEMES)) {
   writeFileSync(join(out, `banner-${name}.svg`), banner(t));
   for (const c of CARDS) writeFileSync(join(out, `card-${c.id}-${name}.svg`), card(c, t));
+  writeFileSync(join(out, `card-declic-wide-${name}.svg`), card(CARDS[0], t, true));
 }
 console.log("ok");

@@ -1,16 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 252" width="600" height="252" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 188" width="420" height="188" role="img" aria-labelledby="t d">
 <title id="t">Orient'Ex</title>
-<desc id="d">live. Volunteer mentoring for students and young professionals. Puts students and young professionals in touch with volunteer mentors. Built with Nuxt.js, MySQL, Docker, GitLab CI/CD.</desc>
-<rect x="1" y="1" width="598" height="250" rx="14" fill="#0D1722" stroke="#22394D" stroke-width="2"/>
-<rect x="1" y="26" width="5" height="54" rx="2.5" fill="#2E9BDA"/>
-<rect x="28" y="24" width="66" height="26" rx="13" fill="#132130" stroke="#56C98A" stroke-width="1.5"/>
-<circle cx="42" cy="37" r="4" fill="#56C98A"/>
-<text x="53" y="41.5" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="13" font-weight="600" fill="#56C98A" letter-spacing="0.4">LIVE</text>
-<text x="28" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="28" font-weight="700" fill="#E8F0F6" letter-spacing="-0.4">Orient'Ex</text>
-<text x="28" y="116" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17.5" font-weight="600" fill="#6CBDEA">Volunteer mentoring for students and young professionals</text>
-<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="16.5" fill="#A3B6C5">
-  <tspan x="28" y="148">Puts students and young professionals in touch with</tspan>
-  <tspan x="28" y="172">volunteer mentors.</tspan>
+<desc id="d">live. Volunteer mentoring platform. Puts students and young professionals in touch with volunteer mentors. Built with Nuxt.js, MySQL, Docker, GitLab CI/CD.</desc>
+<rect x="1" y="1" width="418" height="186" rx="12" fill="#0D1722" stroke="#22394D" stroke-width="1.5"/>
+<rect x="1" y="50" width="4" height="40" rx="2" fill="#2E9BDA"/>
+<rect x="20" y="18" width="51" height="22" rx="11" fill="#132130" stroke="#56C98A"/><text x="45.5" y="32.675" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" font-weight="600" letter-spacing="0.5" fill="#56C98A">LIVE</text>
+<text class="cta" x="400" y="33" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#6CBDEA">Open the app →</text>
+<text x="20" y="70" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#E8F0F6" letter-spacing="-0.3">Orient'Ex</text>
+<text x="20" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="600" fill="#6CBDEA">Volunteer mentoring platform</text>
+<text font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#A3B6C5">
+  <tspan x="20" y="113">Puts students and young professionals in touch</tspan>
+  <tspan x="20" y="131">with volunteer mentors.</tspan>
 </text>
-<g transform="translate(0 196)"><rect x="28" y="0" width="80" height="30" rx="15" fill="#16293A" stroke="#22394D"/><text x="68" y="20" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#9AD0F0">Nuxt.js</text><rect x="114" y="0" width="63" height="30" rx="15" fill="#16293A" stroke="#22394D"/><text x="145.5" y="20" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#9AD0F0">MySQL</text><rect x="183" y="0" width="71" height="30" rx="15" fill="#16293A" stroke="#22394D"/><text x="218.5" y="20" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#9AD0F0">Docker</text><rect x="260" y="0" width="122" height="30" rx="15" fill="#16293A" stroke="#22394D"/><text x="321" y="20" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="14" fill="#9AD0F0">GitLab CI/CD</text></g>
+<rect x="20" y="148" width="64" height="22" rx="11" fill="#16293A" stroke="#22394D"/><text x="52" y="163.025" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="400" letter-spacing="0" fill="#9AD0F0">Nuxt.js</text><rect x="89" y="148" width="50" height="22" rx="11" fill="#16293A" stroke="#22394D"/><text x="114" y="163.025" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="400" letter-spacing="0" fill="#9AD0F0">MySQL</text><rect x="144" y="148" width="57" height="22" rx="11" fill="#16293A" stroke="#22394D"/><text x="172.5" y="163.025" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="400" letter-spacing="0" fill="#9AD0F0">Docker</text><rect x="206" y="148" width="100" height="22" rx="11" fill="#16293A" stroke="#22394D"/><text x="256" y="163.025" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace" font-size="11.5" font-weight="400" letter-spacing="0" fill="#9AD0F0">GitLab CI/CD</text>
+
 </svg>

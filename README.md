@@ -53,52 +53,38 @@ A former mathematics teacher, I learn how the work is done before I write code, 
 
 ## Featured work
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/card-declic-dark.svg">
-  <img src="assets/card-declic-light.svg" width="600" alt="DECLIC, professional and confidential. Declaring and cataloguing connected scientific instruments: a 4-step declaration flow with moderation before publication, and a catalogue of 53 LoRaWAN instrument models. React 18, TypeScript, Express, Prisma, PostgreSQL, OIDC.">
-</picture>
-
-[Case study on my portfolio](https://koud-portfolio.netlify.app/en/projects/declic)
-
-<picture>
+<p align="center">
+<a href="https://koud-portfolio.netlify.app/en/projects/declic"><picture>
+  <source media="(max-width: 600px) and (prefers-color-scheme: dark)" srcset="assets/card-declic-dark.svg">
+  <source media="(max-width: 600px)" srcset="assets/card-declic-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/card-declic-wide-dark.svg">
+  <img src="assets/card-declic-wide-light.svg" width="804" alt="DECLIC, confidential. Declaring and cataloguing connected scientific instruments: a 4-step declaration flow moderated before publication, a catalogue of 53 LoRaWAN instrument models, OIDC sign-in. React, TypeScript, Express, Prisma, PostgreSQL. Opens the case study.">
+</picture></a>
+<a href="https://domicile.esgegroup.com"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-esge-domicile-dark.svg">
-  <img src="assets/card-esge-domicile-light.svg" width="600" alt="ESGE Domicile, live. Home services, from quote to invoice: three workspaces for clients, service providers and the team, with access rules enforced in the database by Row Level Security. Next.js, React, TypeScript, Supabase, PostgreSQL, about 230 Playwright tests.">
-</picture>
-
-[domicile.esgegroup.com](https://domicile.esgegroup.com)
-
-<picture>
+  <img src="assets/card-esge-domicile-light.svg" width="400" alt="ESGE Domicile, live. Home services, from quote to invoice: three workspaces for clients, providers and the team, Row Level Security, about 230 Playwright tests. Next.js, React, TypeScript, Supabase, Playwright. Opens the app.">
+</picture></a>
+<a href="https://edu-connect-web.vercel.app"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-akili-dark.svg">
-  <img src="assets/card-akili-light.svg" width="600" alt="Akili, demo. School management for several schools at once, usable offline, with five user roles. React, TypeScript, Express, Prisma, PostgreSQL, Redis.">
-</picture>
-
-[Akili demo](https://edu-connect-web.vercel.app)
-
-<picture>
+  <img src="assets/card-akili-light.svg" width="400" alt="Akili, demo. School management for several schools at once, usable offline, five user roles. React, TypeScript, Express, Prisma, PostgreSQL. Opens the demo.">
+</picture></a>
+<a href="https://akili-universite.vercel.app"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-akili-universite-dark.svg">
-  <img src="assets/card-akili-universite-light.svg" width="600" alt="Akili Université, demo. The edition of the Akili school management platform adapted to universities. React, TypeScript, Express, Prisma, PostgreSQL, Redis.">
-</picture>
-
-[Akili Université demo](https://akili-universite.vercel.app)
-
-<picture>
+  <img src="assets/card-akili-universite-light.svg" width="400" alt="Akili Université, demo. The edition of the Akili school management platform adapted to universities. React, TypeScript, Express, Prisma, PostgreSQL. Opens the demo.">
+</picture></a>
+<a href="https://orient-ex.org"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-orient-ex-dark.svg">
-  <img src="assets/card-orient-ex-light.svg" width="600" alt="Orient'Ex, live. Volunteer mentoring that puts students and young professionals in touch with volunteer mentors. Nuxt.js, MySQL, Docker, GitLab CI/CD.">
-</picture>
-
-[orient-ex.org](https://orient-ex.org)
-
-<picture>
+  <img src="assets/card-orient-ex-light.svg" width="400" alt="Orient'Ex, live. A volunteer mentoring platform that puts students and young professionals in touch with volunteer mentors. Nuxt.js, MySQL, Docker, GitLab CI/CD. Opens the app.">
+</picture></a>
+<a href="https://vy-fawn.vercel.app"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-vy-dark.svg">
-  <img src="assets/card-vy-light.svg" width="600" alt="VY, live. An online clothing store where each item is printed only once it has been ordered. Next.js.">
-</picture>
-
-[VY store](https://vy-fawn.vercel.app)
-
+  <img src="assets/card-vy-light.svg" width="400" alt="VY, live. An online clothing store where each item is printed only once it has been ordered. Next.js. Opens the app.">
+</picture></a>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/card-carhilo-dark.svg">
-  <img src="assets/card-carhilo-light.svg" width="600" alt="Carhilo, in progress. A carpooling app written in Flutter, with development driven by tests.">
+  <img src="assets/card-carhilo-light.svg" width="400" alt="Carhilo, in progress. A carpooling app written in Flutter, with development driven by tests.">
 </picture>
+</p>
 
 ## Tech stack
 
